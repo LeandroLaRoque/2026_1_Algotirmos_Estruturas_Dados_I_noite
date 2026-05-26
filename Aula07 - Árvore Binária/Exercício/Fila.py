@@ -1,9 +1,6 @@
-from No import No
 from NoFila import NoFila
 
-
 class Fila:
-
     def __init__(self):
         self.inicio = None
         self.fim = None

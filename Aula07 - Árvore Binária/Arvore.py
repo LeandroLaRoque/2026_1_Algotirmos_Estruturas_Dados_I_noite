@@ -52,12 +52,15 @@ class Arvore:
         fila.add(raiz)
 
         while fila.inicio != None:
-            atual = fila.remover()
+            tamanho = fila.tamanho
+            for _ in range(tamanho):
+                atual = fila.remover()
 
-            print(atual.dado, end=" - ")
+                print(atual.dado, end=" - ")
 
-            if atual.esq is not None:
-                fila.add(atual.esq)
+                if atual.esq is not None:
+                    fila.add(atual.esq)
 
-            if atual.dir is not None:
-                fila.add(atual.dir)
+                if atual.dir is not None:
+                    fila.add(atual.dir)
+            print("")
